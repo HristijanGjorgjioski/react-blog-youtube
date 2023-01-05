@@ -1,0 +1,23 @@
+.header {
+  text-align: center;
+}
+
+.header h2 {
+  color: #0080ff;
+  font-size: 2rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  color: #0f52ba;
+  margin-bottom: 1rem;
+}
+
+.header h1 span {
+  color: #b0c4de;
+}
+
+.header p {
+  color: #a9a9a9;
+  font-weight: 500;
+}
