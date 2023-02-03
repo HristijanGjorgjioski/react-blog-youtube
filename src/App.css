@@ -1,0 +1,29 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.App {
+    margin: 0;
+    padding: 14px;
+} 
+
+.dark {
+    background-color: rgb(31, 31, 31);
+}
+
+.dark h1 {
+    color: white;
+}
+
+.dark h3 {
+    color: white;
+}
+
+.dark h6 {
+    color: white;
+}
+
+.dark p {
+    color: white;
+}

@@ -21,3 +21,17 @@
   color: #a9a9a9;
   font-weight: 500;
 }
+
+.toggle-theme {
+  cursor: pointer;
+  float: right;
+  margin-right: 6px;
+}
+
+.dark {
+  color: gold;
+}
+
+.light {
+  color: black;
+}

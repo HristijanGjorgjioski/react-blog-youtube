@@ -1,20 +1,22 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 
 import Header from '../../components/Header/Header';
 import SearchBar from '../../components/SearchBar/SearchBar';
 import Blogs from '../../components/Blogs/Blogs';
 import EmptyList from '../../components/EmptyList/EmptyList';
 
-import { allBlogs } from '../../config/blogs';
+import { MainContext } from '../../context/context';
 
 const Home = () => {
-    const [blogs, setBlogs] = useState(allBlogs)
+    const { blogs: contextBlogs } = useContext(MainContext);
+
+    const [blogs, setBlogs] = useState(contextBlogs)
     const [searchTerm, setSearchTerm] = useState('')
 
     const onSubmit = (e) => {
         e.preventDefault();
 
-        const filteredBlogs = allBlogs?.filter((blog) => (
+        const filteredBlogs = contextBlogs?.filter((blog) => (
             blog.category.toLowerCase().includes(searchTerm.toLowerCase().trim())
         ));
         setBlogs(filteredBlogs);
@@ -24,7 +26,7 @@ const Home = () => {
 
     const clearSearch = () => {
         setSearchTerm('');
-        setBlogs(allBlogs);
+        setBlogs(contextBlogs);
     }
 
     return (
